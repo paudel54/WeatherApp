@@ -64,7 +64,7 @@ const formatForecastWeather = (data) => {
     return {
       // ccc implies the day sun mon tue
       title: formatToLocalTime(d.dt, timezone, "hh:mm a"),
-      temp: d.temp.day,
+      temp: d.temp,
       icon: d.weather[0].icon,
     };
   });
