@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  const [query, setQuery] = useState({ q: 'kathmandu' })
+  const [query, setQuery] = useState({ q: 'tokyo' })
   const [units, setUnits] = useState('metric')
   const [weather, setWeather] = useState(null)
 
@@ -32,7 +32,8 @@ function App() {
     if (!weather) return ' from-cyan-700 to-blue-700';
     const threshold = units === 'metric' ? 20 : 60;
     if (weather.temp <= threshold) return 'from-cyan-700';
-    return 'from-yellow-700 to-orange-700'
+    return 'from-cyan-700 to-blue-700'
+    //return 'from-yellow-700 to-orange-700'
   }
 
 
